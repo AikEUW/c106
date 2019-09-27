@@ -1,0 +1,57 @@
+from math import *
+def trinome(A,B,C):
+    if A == 0:
+        print("A ne peut pas être nul")
+        return
+    if A <= 0:
+        sa=("-")
+        sma=("+")
+    if A > 0:
+        sa="+"
+        sma="-"
+
+    print("______________________________________________________________________")
+    print("Programme qui calcule un trinome de degré 2: ")
+    delta=(B**2)-4*A*C #Calcul du discriminant
+
+    if delta <0: #Si Delta est inférieur à 0 on fait
+     print("Aucune soluce...")
+
+     print("*******************tableau***********************")
+     print("*************************************************")
+     print("*moins infini           "+str(x0)+"           "+"plus infini*")
+     print("*************************************************")
+     print("*               "+str(sa)+"       *        "+str(sa)+"              *")
+     print("*************************************************")
+
+
+    elif delta ==0: #Si delta est égal à 0
+     print("Il y a UNE solution.")
+     x=-B/2*A #On calcule X
+     print("La seule solution est=",x) #Affichage de x
+
+     print("*******************tableau***********************")
+     print("*************************************************")
+     print("*moins infini                        "+"plus infini*")
+     print("*************************************************")
+     print("*                     "+str(sa)+"                         *")
+     print("*************************************************")
+
+    elif delta >0: #Si delta est supérieur à 0
+     print("Il ya deux solutions;")
+    racine=sqrt(delta) #Calcul racine delta
+    m=2*A
+    x1=(-B-racine)/m #Calcul x1
+    x2=(-B+racine)/m #Calcul x2
+    print("Il existe la soluce x1=",x1, "ainsi que la solution x2=",x2) #Afficher x1 et x2
+
+    print("*******************tableau***********************")
+    print("*************************************************")
+    print("*moins infini       "+str(x1)+"       "+str(x2)+"        "+"plus infini*")
+    print("*************************************************")
+    print("*                    "+str(sa)+"         "+str(sma)+"          "+str(sa)+"              *")
+    print("*************************************************")
+
+    print("______________________________________________________________________")
+
+
